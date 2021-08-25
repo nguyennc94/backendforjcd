@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 const axios = require("axios");
+const cool = require('cool-ascii-faces');
 
 app.use(cors());
 // const corsOptions = {
@@ -80,7 +81,7 @@ app.get('/', async (req, res) => {
     console.log(`New listing create with id: ${result.insertedId}`)
   }
 });
-
+app.get('/cool', (req, res) => res.send(cool()))
 //api endpoints
 app.use('/login', require('./routes/loginserver'));
 app.use('/catalog', require('./routes/catalogserver'));
