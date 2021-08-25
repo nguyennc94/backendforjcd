@@ -41,8 +41,8 @@ app.get('/', async (req, res) => {
 
   const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect", body);
   const a = response.data
-  //       const jsonResponse = JSON.stringify(arr);    
-  //       res.send(jsonResponse);
+  const jsonResponse = JSON.stringify(a);
+  res.send(jsonResponse);
 
 
   async function main() {
