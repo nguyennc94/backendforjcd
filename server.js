@@ -11,7 +11,7 @@ app.use(cors());
 //     origin: "http://localhost:3000"
 // };
 
-app.get('/catalog', async (req, res) => {
+app.get('/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
       "Access-Control-Allow-Headers",
@@ -40,8 +40,8 @@ app.get('/catalog', async (req, res) => {
 
         const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
         const a = response.data
-//       const jsonResponse = JSON.stringify(arr);    
-//       res.send(jsonResponse);
+      const jsonResponse = JSON.stringify(a);    
+      res.send(jsonResponse);
 
 
 //       async function main(){
