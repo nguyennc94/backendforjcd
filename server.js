@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 const axios = require("axios");
 const cool = require('cool-ascii-faces');
-
+const catalogdrug = require('./routes/catalogserver')
 app.use(cors());
 // const corsOptions = {
 //     origin: "http://localhost:3000"
@@ -84,7 +84,7 @@ app.get('/', async (req, res) => {
 app.get('/cool', (req, res) => res.send(cool()))
 //api endpoints
 app.use('/login', require('./routes/loginserver'));
-app.use('/catalog', require('./routes/catalogserver'));
+app.use('/catalog',);
 
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
