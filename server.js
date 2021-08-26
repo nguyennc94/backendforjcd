@@ -50,7 +50,7 @@ app.get('/', async (req, res) => {
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
-    const uri = "mongodb+srv://canadadrugstore:02061994@cluster0.issgz.mongodb.net/PW?retryWrites=true&w=majority";
+    const uri = process.env.MONGODB_URI;
 
 
     const client = new MongoClient(uri);
