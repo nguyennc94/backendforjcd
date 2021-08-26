@@ -3,7 +3,7 @@ const axios = require("axios");
 const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 
-router.get('/drug/:drug', async (req, res) => {
+router.get('/', async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header(
     "Access-Control-Allow-Headers",
