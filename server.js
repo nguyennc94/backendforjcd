@@ -53,27 +53,38 @@ app.get('/', async (req, res) => {
     const uri = `${process.env.MONGODB_URI}`;
 
 
-    const client = new MongoClient(uri);
+    // const client = new MongoClient(uri);
+    mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
 
-    try {
-      // Connect to the MongoDB cluster
-      await client.connect();
-
-      // Make the appropriate DB calls
-      await createListing(client, {
+    mongoose.connection.on('connected', () => {
+      createListing(client, {
         name: "PWdata",
         data: a
       })
+    })
 
-    } catch (e) {
-      console.error(e);
-    } finally {
-      await client.close();
-    }
+    // try {
+    // Connect to the MongoDB cluster
+    // await client.connect();
+
+    // Make the appropriate DB calls
+    // await createListing(client, {
+    // name: "PWdata",
+    // data: a
+    //     })
+
+    //   } catch (e) {
+    //     console.error(e);
+    //   } finally {
+    //     await client.close();
+    //   }
+    // }
+
+    // main().catch(console.error);
   }
-
-  main().catch(console.error);
-
   async function createListing(client, newListing) {
     const result = await client.db("PW").collection("PWtest")
       .insertOne(newListing)
