@@ -94,8 +94,8 @@ app.get('/:drug', async (req, res) => {
 
 
 //api endpoints
-app.use('/login', require('./routes/loginserver'));
-app.use('/catalog', require('./routes/catalogserver'));
+// app.use('/login', require('./routes/loginserver'));
+// app.use('/catalog', require('./routes/catalogserver'));
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
