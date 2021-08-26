@@ -82,7 +82,7 @@ app.use(cors());
 //   });
 
 
-app.get('catalog/drug/:drug', async (req, res) => {
+app.all('catalog/drug/:drug', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
     res.header(
         "Access-Control-Allow-Headers",
