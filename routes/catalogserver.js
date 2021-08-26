@@ -1,7 +1,7 @@
 var router = require('express').Router();
 const axios = require("axios");
 const mongoose = require('mongoose')
-const {MongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
 
 router.get('/drug/:drug', async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
@@ -40,11 +40,11 @@ router.get('/drug/:drug', async (req, res) => {
   </transaction> 
 `;
 
-    const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
-    const a = response.data
-    console.log(response)
-    const jsonResponse = JSON.stringify(a);    
-    res.send(jsonResponse);
+  const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect", body);
+  const a = response.data
+  console.log(response)
+  const jsonResponse = JSON.stringify(a);
+  res.send(jsonResponse);
 
 
   // async function main(){
@@ -53,24 +53,24 @@ router.get('/drug/:drug', async (req, res) => {
   //    * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
   //    */
   //   const uri = "mongodb+srv://canadadrugstore:02061994@cluster0.issgz.mongodb.net/PW?retryWrites=true&w=majority";
-  
-  
+
+
   //   const client = new MongoClient(uri);
-  
+
   //   try {
   //       // Connect to the MongoDB cluster
   //       await client.connect();
-  
+
   //       // Make the appropriate DB calls
   //       await findOneListingByName(client,"PWdata")
-  
+
   //   } catch (e) {
   //       console.error(e);
   //   } finally {
   //       await client.close();
   //   }
   // }
-  
+
   // main().catch(console.error);
 
   // async function findOneListingByName(client, nameofListing){
@@ -87,8 +87,7 @@ router.get('/drug/:drug', async (req, res) => {
 
   // }
 
-  });
+});
 
 
-  module.exports = router;
-  
+module.exports = router;

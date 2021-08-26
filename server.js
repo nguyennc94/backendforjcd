@@ -11,11 +11,11 @@ app.use(cors());
 //     origin: "http://localhost:3000"
 // };
 
-app.get('/', async (req, res) => {
+app.get('/catalog', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
     );
     let body = `<?xml version="1.0"?> 
 
@@ -32,18 +32,18 @@ app.get('/', async (req, res) => {
                  <momex:authenticate momex:username="xmlconnect_25" 
 
                  momex:password="984@qSv@rps@R9F"/> 
-              
+
 
 
     </transaction> 
   `;
 
-    const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect", body);
-    const a = response.data
-    const jsonResponse = JSON.stringify(a);
-    res.send(jsonResponse);
+        const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+        const a = response.data
+//       const jsonResponse = JSON.stringify(arr);    
+//       res.send(jsonResponse);
 
-})
+
 //       async function main(){
 //         /**
 //          * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
@@ -79,10 +79,7 @@ app.get('/', async (req, res) => {
 
 //         console.log(`New listing create with id: ${result.insertedId}`)
 //       }
-//   });
-
-
-
+  });
 
 //api endpoints
 // app.use('/login', require('./routes/loginserver'));
