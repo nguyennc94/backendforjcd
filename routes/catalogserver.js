@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 
 router.get('/drug/:drug', async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
