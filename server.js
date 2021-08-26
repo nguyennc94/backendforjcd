@@ -11,7 +11,7 @@ app.use(cors());
 //     origin: "http://localhost:3000"
 // };
 
-app.get('/:drug', async (req, res) => {
+app.get('/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
         "Access-Control-Allow-Headers",
@@ -32,16 +32,7 @@ app.get('/:drug', async (req, res) => {
                  <momex:authenticate momex:username="xmlconnect_25" 
 
                  momex:password="984@qSv@rps@R9F"/> 
-                 <momex:criteria> 
-  
-                 <pw:drug-package-option pw:include-zero-priced="true" 
-         
-                        pw:include-inactive="false"/> 
-         
-                 <pw:drug-pics-search>${req.params.drug}</pw:drug-pics-search> 
-         
-          
-             </momex:criteria> 
+              
 
 
     </transaction> 
