@@ -3,7 +3,7 @@ const axios = require("axios");
 
 
 router.get('/id/:id/firstname/:firstname/lastname/:lastname/phonenumber/:phonenumber/areacode/:areacode/email/:email/year/:year/month/:month/day/:day/gender/:gender/feet/:feet/inches/:inches/weight/:weight/package/:package/refill/:refill/faxnumber/:faxnumber/areacodeday/:areacodeday', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader("Access-Control-Allow-Origin", "https://elated-jang-6dcf18.netlify.app");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"

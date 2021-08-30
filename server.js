@@ -8,11 +8,11 @@ const axios = require("axios");
 
 app.use(cors());
 // const corsOptions = {
-//     origin: "http://localhost:3000"
+//     origin: "https://elated-jang-6dcf18.netlify.app"
 // };
 
 app.get('/', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader("Access-Control-Allow-Origin", "https://elated-jang-6dcf18.netlify.app");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
