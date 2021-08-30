@@ -8,7 +8,7 @@ router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
     );
-    let body = `?xml version="1.0"?>
+    let body = `<?xml version="1.0"?>
     <transaction xmlns="http://www.metrex.net/momex/transaction#"
         xmlns:momex="http://www.metrex.net/momex#"
         xmlns:mt="http://www.metrex.net/momex/terms#"
