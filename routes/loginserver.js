@@ -3,7 +3,7 @@ const axios = require("axios");
 
 
 router.get('/users/:users/password/:password', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://elated-jang-6dcf18.netlify.app");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
@@ -22,14 +22,13 @@ router.get('/users/:users/password/:password', async (req, res) => {
         </users>
     </transaction>
   `;
-  
+
       const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
-      const jsonResponse = JSON.stringify(a);    
+      const jsonResponse = JSON.stringify(a);
       res.send(jsonResponse);
   });
 
 
   module.exports = router;
-  

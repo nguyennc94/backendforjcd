@@ -12,35 +12,35 @@ app.use(cors());
 // };
 
 app.get('/', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://elated-jang-6dcf18.netlify.app");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
     );
-    let body = `<?xml version="1.0"?> 
+    let body = `<?xml version="1.0"?>
 
-    <transaction xmlns="http://www.metrex.net/momex/transaction#" 
+    <transaction xmlns="http://www.metrex.net/momex/transaction#"
 
-                 xmlns:momex="http://www.metrex.net/momex#" 
+                 xmlns:momex="http://www.metrex.net/momex#"
 
-                 xmlns:pw="http://www.pharmacywire.com/" 
+                 xmlns:pw="http://www.pharmacywire.com/"
 
-                 type="Catalog" 
+                 type="Catalog"
 
-                 local="true"> 
+                 local="true">
 
-                 <momex:authenticate momex:username="xmlconnect_25" 
+                 <momex:authenticate momex:username="xmlconnect_25"
 
-                 momex:password="984@qSv@rps@R9F"/> 
+                 momex:password="984@qSv@rps@R9F"/>
 
 
 
-    </transaction> 
+    </transaction>
   `;
 
         const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
         const a = response.data
-      const jsonResponse = JSON.stringify(a);    
+      const jsonResponse = JSON.stringify(a);
       res.send(jsonResponse);
 
 
@@ -85,6 +85,9 @@ app.get('/', async (req, res) => {
 app.use('/login', require('./routes/loginserver'));
 app.use('/catalog', require('./routes/catalogserver'));
 app.use('/header', require('./routes/headerserver'));
+app.use('/register', require('./routes/registerserver'));
+app.use('/addshippingaddress', require('./routes/addshippingaddressserver'));
+
 
 
 app.listen(PORT, () => {
