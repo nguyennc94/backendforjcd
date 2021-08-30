@@ -16,7 +16,7 @@ router.get('/id/:id/streetaddress/:streetaddress/apt/:apt/city/:city/region/:reg
         local="true">
       <momex:authenticate momex:username="xmlconnect_25"
                 momex:password="984@qSv@rps@R9F"/>
-      <pw:patient momex:id="${id}"/>
+      <pw:patient momex:id="${req.params.id}"/>
       <shippingaddress>
         <momex:address1>${req.params.streetaddress}-${req.params.apt}</momex:address1>
         <momex:address2/>

@@ -88,7 +88,17 @@ app.use('/header', require('./routes/headerserver'));
 app.use('/register', require('./routes/registerserver'));
 app.use('/addshippingaddress', require('./routes/addshippingaddressserver'));
 app.use('/prescription', require('./routes/searchserver'));
-
+app.use('/forgotpassword', require('./routes/forgotpasswordserver'));
+app.use('/deleteshipping', require('./routes/deleteaddressserver'));
+app.use('/updateinfo', require('./routes/updatepatientinfoserver'));
+app.use('/editshippingaddress', require('./routes/editshippingaddressserver'));
+app.use('/getshippingaddress', require('./routes/getshippingaddressserver'));
+app.use('/submitorder', require('./routes/submitorderserver'));
+app.use('/verifycoupon', require('./routes/verifycouponserver'));
+app.use('/updateinfoprofile', require('./routes/updateinfoprofileserver'));
+app.use('/changepassword', require('./routes/setpasswordserver'));
+app.use('/getpatientorder', require('./routes/getpatientorderserver'));
+app.use('/getorder', require('./routes/getorderserver'));
 
 
 app.listen(PORT, () => {
