@@ -19,14 +19,22 @@ router.get('/id/:id/items/:items/couponcode/:couponcode/addressscript/:addresssc
           <order>
             <items>
             ${req.params.items}
-            <item momex:coupon-code="${req.params.couponcode}"></item>
             </items>
-            ${req.params.addressscript}
-            <shippingfee>${req.params.deliverymethod}</shippingfee>
-            ${req.params.payment}
+            <shippingaddress momex:id="4991"/>
+            <shippingfee>0</shippingfee>
+            <payment type="draft">
+              <amount>54.4</amount>
+              <draftnumber></draftnumber>
+              <firstname>null</firstname>
+              <middlename>M</middlename>
+              <lastname>null</lastname>
+              <institution></institution>
+            </payment>
           </order
     </transaction>
   `;
+
+  console.log(body)
 
       const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
