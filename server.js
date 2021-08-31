@@ -12,7 +12,7 @@ app.use(cors());
 // };
 
 app.get('/', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://elated-jang-6dcf18.netlify.app");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
