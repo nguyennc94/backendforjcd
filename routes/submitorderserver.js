@@ -23,7 +23,7 @@ router.get('/id/:id', async (req, res) => {
             <price>54.4</price>
             </item>
             </items>
-            <shippingaddress momex:id="4991"/>
+            <shippingaddress momex:id='4991'/>
             <shippingfee>0</shippingfee>
             <payment type="draft">
               <amount>54.4</amount>
