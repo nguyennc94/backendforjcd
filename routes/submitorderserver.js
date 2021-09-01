@@ -17,7 +17,11 @@ router.get('/id/:id/items/:items/couponcode/:couponcode/addressscript/:addresssc
 
            <pw:patient momex:id="${req.params.id}"/>
           <order>
-            ${req.params.items}
+
+          <item momex:id="DP-12881">
+          <quantity>1</quantity>
+          <price>54.4</price>
+          </item>
             <shippingaddress momex:id="4991"/>
             <shippingfee>0</shippingfee>
             <payment type="draft">
