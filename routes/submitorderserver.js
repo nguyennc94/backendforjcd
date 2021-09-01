@@ -9,30 +9,48 @@ router.get('/id/:id', async (req, res) => {
       "Origin, X-Requested-With, Content-Type, Accept"
     );
     let body = `<?xml version="1.0"?>
-    <transaction xmlns="http://www.metrex.net/momex/transaction#"
-           xmlns:momex="http://www.metrex.net/momex#"
-           xmlns:pw="http://www.pharmacywire.com/"
-           type="SubmitOrder" local="true">
-           <momex:authenticate momex:username="xmlconnect_25" momex:password="984@qSv@rps@R9F" />
 
-           <pw:patient momex:id="${req.params.id}"/>
-          <order>
-            <items>
-            <item momex:id="DP-12881">
-            <quantity>1</quantity>
-            <price>54.4</price>
-            </item>
-            </items>
-            <shippingfee>0</shippingfee>
-            <payment type="draft">
-              <amount>54.4</amount>
-              <draftnumber></draftnumber>
-              <firstname>null</firstname>
-              <middlename>M</middlename>
-              <lastname>null</lastname>
-              <institution></institution>
-            </payment>
-          </order
+    <transaction	xmlns="http://www.metrex.net/momex/transaction#"
+
+            xmlns:momex="http://www.metrex.net/momex#"
+
+            xmlns:pw="http://www.pharmacywire.com/"
+
+            type="SubmitOrder"
+
+            local="true">
+
+    <momex:authenticate momex:username="xmlconnect_25" momex:password="984@qSv@rps@R9F" />
+
+    <pw:patient momex:id="${req.params.id}"/>
+
+    <order>
+    <items>
+    <item momex:id="DP-12884">
+         <quantity>1</quantity>
+         <price>54.4</price>
+         </item>
+    </items>
+    <shippingfee>25.00</shippingfee>
+    <payment type="draft">
+
+    <amount>99.99</amount>
+
+    <draftnumber></draftnumber>
+
+    <firstname>Test</firstname>
+
+    <middlename>M</middlename>
+
+    <lastname>Tester</lastname>
+
+    <institution>First National</institution>
+
+    </payment>
+
+
+    </order>
+
     </transaction>
   `;
 
