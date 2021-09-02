@@ -2,7 +2,7 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/deliverymethod/:deliverymethod`, async (req, res) => {
+router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/deliverymethod/:deliverymethod/payment/:payment`, async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
@@ -27,36 +27,21 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
     <order>
     <items>
     ${req.params.items}
-    <item momex:coupon-code="${couponCode}"></item>
+    <item momex:coupon-code="${req.params.coupon}"></item>
 
     </items>
 
-    ${addressscript}
+    ${req.params.addressscript}
 
-    <shippingfee>${deliveryMethod}</shippingfee>
+    <shippingfee>${req.params.deliverymethod}</shippingfee>
 
-    <payment type="draft">
-
-<amount>99.99</amount>
-
-<draftnumber></draftnumber>
-
-<firstname>Test</firstname>
-
-<middlename>M</middlename>
-
-<lastname>Tester</lastname>
-
-<institution>First National</institution>
-
-</payment>
+   ${req.params.payment}
 
     </order>
 
     </transaction>
            `
 
-  console.log(req.params.items)
 
       const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
