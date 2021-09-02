@@ -2,7 +2,7 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get('/type/:type/name/:name/encode/:encode', async (req, res) => {
+router.get(`/type/:type/name/:name/encode/':encode'`, async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
