@@ -2,7 +2,7 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get(`/id/:id/items/:items`, async (req, res) => {
+router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/deliverymethod/:deliverymethod`, async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
@@ -27,29 +27,34 @@ router.get(`/id/:id/items/:items`, async (req, res) => {
     <order>
     <items>
     ${req.params.items}
+    <item momex:coupon-code="${couponCode}"></item>
+
     </items>
-    <shippingfee>25.00</shippingfee>
+
+    ${addressscript}
+
+    <shippingfee>${deliveryMethod}</shippingfee>
+
     <payment type="draft">
 
-    <amount>99.99</amount>
+<amount>99.99</amount>
 
-    <draftnumber></draftnumber>
+<draftnumber></draftnumber>
 
-    <firstname>Test</firstname>
+<firstname>Test</firstname>
 
-    <middlename>M</middlename>
+<middlename>M</middlename>
 
-    <lastname>Tester</lastname>
+<lastname>Tester</lastname>
 
-    <institution>First National</institution>
+<institution>First National</institution>
 
-    </payment>
-
+</payment>
 
     </order>
 
     </transaction>
-  `;
+           `
 
   console.log(req.params.items)
 
