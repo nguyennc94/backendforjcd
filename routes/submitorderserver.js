@@ -31,7 +31,6 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
 
     </items>
 
-    ${req.params.addressscript}
 
     <shippingfee>${req.params.deliverymethod}</shippingfee>
 
@@ -42,7 +41,7 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
     </transaction>
            `
 
-
+          //  ${req.params.addressscript}
       const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
