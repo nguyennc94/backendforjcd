@@ -99,6 +99,7 @@ app.use('/updateinfoprofile', require('./routes/updateinfoprofileserver'));
 app.use('/changepassword', require('./routes/setpasswordserver'));
 app.use('/getpatientorder', require('./routes/getpatientorderserver'));
 app.use('/getorder', require('./routes/getorderserver'));
+app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
 
 
 app.listen(PORT, () => {
