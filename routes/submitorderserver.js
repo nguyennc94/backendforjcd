@@ -2,8 +2,7 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get(`/id/:id/items/:items/coupon/:coupon`, async (req, res) => {
-  ///addressscript/:addressscript/deliverymethod/:deliverymethod
+router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/deliverymethod/:deliverymethod`, async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
