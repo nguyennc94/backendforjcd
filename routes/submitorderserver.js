@@ -47,7 +47,7 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);
-      res.send(jsonResponse);
+      res.send(body);
   });
 
 
