@@ -26,7 +26,7 @@ router.get(`/:test`, async (req, res) => {
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);
-      res.send(req.params.test.data);
+      res.send(req.params.test);
 
   });
 
