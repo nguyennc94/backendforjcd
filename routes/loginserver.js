@@ -3,7 +3,7 @@ const axios = require("axios");
 
 
 router.get('/users/:users/password/:password', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"

@@ -4,9 +4,7 @@ const axios = require("axios");
 
 router.get(`/:test`, async (req, res) => {
   // type/:type/name/:name/encode/:encode
-    const reader = new FileReader()
-    reader.readAsDataURL(req.params.test)
-    reader.onload()=() =>{
+
 
 
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -31,8 +29,8 @@ router.get(`/:test`, async (req, res) => {
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);
-      res.send(reader.result);
-    }
+      res.send(jsonResponse);
+
   });
 
 
