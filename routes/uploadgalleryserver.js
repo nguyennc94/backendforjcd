@@ -2,10 +2,14 @@ var router = require('express').Router();
 const axios = require("axios");
 const multer = require("multer")
 const upload = multer()
+const fs = require("fs")
 
 router.post('/',upload.single("file"),async (req, res) => {
 
- res.send(req.file)
+fs.readFile(req.file, (data) => {
+  res.send(data)
+
+})
 
 
   //   res.setHeader("Access-Control-Allow-Origin", "*");
