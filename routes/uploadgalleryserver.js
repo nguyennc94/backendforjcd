@@ -2,8 +2,8 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get(`/:test`, async (req, res) => {
-  // type/:type/name/:name/encode/:encode
+router.get(`/type/:type/name/:name/encode/:encode`, async (req, res) => {
+
 
 
 
