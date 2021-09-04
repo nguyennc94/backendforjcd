@@ -100,7 +100,7 @@ app.use('/changepassword', require('./routes/setpasswordserver'));
 app.use('/getpatientorder', require('./routes/getpatientorderserver'));
 app.use('/getorder', require('./routes/getorderserver'));
 app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
-
+app.use('/uploadcamera', require('./routes/uploadcameraserver') )
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
