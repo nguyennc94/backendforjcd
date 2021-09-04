@@ -6,17 +6,18 @@ const fs = require("fs")
 
 router.post('/',upload.single("file"),async (req, res) => {
 
-fs.readFile(req.file, (data) => {
-  res.send(data)
-
-})
 
 
-  //   res.setHeader("Access-Control-Allow-Origin", "*");
-  //   res.header(
-  //     "Access-Control-Allow-Headers",
-  //     "Origin, X-Requested-With, Content-Type, Accept"
-  //   );
+
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    fs.readFile(req.file, (data) => {
+      res.send(data)
+
+    })
   //   let body = `<?xml version="1.0"?>
   //   <transaction xmlns="http://www.metrex.net/momex/transaction#"
   //           xmlns:momex="http://www.metrex.net/momex#"
