@@ -5,9 +5,6 @@ const upload = multer()
 
 router.post('/',upload.single("file"),async (req, res) => {
 
-
-
-
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
