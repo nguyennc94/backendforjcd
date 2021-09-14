@@ -2,7 +2,7 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/:day/phone/:phone/areacode/:areacode/billingphone/:billingphone/area1/:area1/faxnumber/:faxnumber/areacodeday/:areacodeday/gender/:gender/feet/:feet/weight/:weight/package/:package/refill/:refill/password/:password/streetaddress1/:streetaddress1/apt1/:apt1/city1/:city1/region1/:region1/country1/:country1/postal1/:postal1', async (req, res) => {
+router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/:day/phone/:phone/areacode/:areacode/billingphone/:billingphone/area1/:area1/faxnumber/:faxnumber/areacodeday/:areacodeday/gender/:gender/feet/:feet/weight/:weight/refill/:refill/password/:password/streetaddress1/:streetaddress1/apt1/:apt1/city1/:city1/region1/:region1/country1/:country1/postal1/:postal1', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
@@ -32,7 +32,7 @@ router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/
         <momex:sex>${req.params.gender}</momex:sex>
         <mt:height mt:feet="${req.params.feet}" mt:inches="${req.params.inches}"/>
         <mt:weight mt:unit="lbs">${req.params.weight}</mt:weight>
-        <pw:child-resistant-packaging>${req.params.package}</pw:child-resistant-packaging>
+        <pw:child-resistant-packaging>No</pw:child-resistant-packaging>
         <pw:call-for-refills>${req.params.refill}</pw:call-for-refills>
         <momex:preferred-vendor momex:id=""/>
         <momex:password>${req.params.password}</momex:password>
