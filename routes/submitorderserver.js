@@ -28,21 +28,7 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
 			  </item>
         </items>
         <shippingaddress momex:id="5067"/>
-      <payment type="creditcard">
-			<cardtype>Visa</cardtype>
-			<cardnumber>4111111111111111</cardnumber>
-			<cvv>111</cvv>
-			<expirymonth>12</expirymonth>
-			<expiryyear>2022</expiryyear>
-			<firstname>Test</firstname>
-			<middlename>M</middlename>
-			<lastname>Customer</lastname>
-			<address>999 Some St.</address>
-			<city>Winnipeg</city>
-			<state>Manitoba</state>
-			<country>Canada</country>
-			<postalcode>R3W4G4</postalcode>
-
+        ${req.params.payment}
 
 		</payment>
       </order>
