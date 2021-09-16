@@ -19,9 +19,15 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
       <pw:patient momex:id="${req.params.id}"/>
       <order>
         <items>
-        ${req.params.items}
+
+				<item momex:id="DP-12864">
+				<quantity>2</quantity>
+				<price>13.47</price>
+
+
+			  </item>
         </items>
-        ${req.params.addressscript}
+        <shippingaddress momex:id="5067"/>
       <payment type="creditcard">
 			<cardtype>Visa</cardtype>
 			<cardnumber>4111111111111111</cardnumber>
