@@ -15,27 +15,26 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
               type="SubmitOrder"
               local="true">
           <momex:authenticate momex:username="xmlconnect_25" momex:password="984@qSv@rps@R9F" />
-    <shippingfee>$25</shippingfee>
       <pw:patient momex:id="${req.params.id}"/>
       <order>
         <items>
-
-				<item momex:id="DP-12864">
-				<quantity>2</quantity>
-				<price>13.47</price>
-
-
-			  </item>
+           ${req.params.items}
+           <item momex:coupon-code="${req.params.coupon}"></item>
         </items>
-        <shippingaddress momex:id="5067"/>
-        ${req.params.payment}
+        ${req.params.addressscript}
+        <shippingfee>${req.params.deliverymethod}</shippingfee>
 
-		</payment>
+
+    ${req.params.payment}
       </order>
+
+
 
 
     </transaction>
            `
+
+      console.log(body)
 
       const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
