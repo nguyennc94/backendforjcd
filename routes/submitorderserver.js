@@ -8,6 +8,13 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
     );
+    let testCoupon;
+    if(req.params.coupon == " "){
+      testCoupon=" ";
+    }
+    else{
+      testCoupon =  `<item momex:coupon-code="${req.params.coupon}"></item>`
+    }
     let body = `<?xml version="1.0"?>
     <transaction	xmlns="http://www.metrex.net/momex/transaction#"
               xmlns:momex="http://www.metrex.net/momex#"
@@ -19,7 +26,8 @@ router.get(`/id/:id/items/:items/coupon/:coupon/addressscript/:addressscript/del
       <order>
         <items>
            ${req.params.items}
-           <item momex:coupon-code="${req.params.coupon}"></item>
+
+           ${testCoupon}
         </items>
         ${req.params.addressscript}
         <shippingfee>${req.params.deliverymethod}</shippingfee>
