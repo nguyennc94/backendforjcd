@@ -14,8 +14,8 @@ router.get('/id/:id/streetaddress/:streetaddress/apt/:apt/city/:city/region/:reg
         xmlns:pw="http://www.pharmacywire.com/"
         type="AddShippingAddress"
         local="true">
-      <momex:authenticate momex:username="xmlconnect_25"
-                momex:password="984@qSv@rps@R9F"/>
+      <momex:authenticate momex:username="xmlconnect_2"
+                momex:password="GAw@FrZ@e9Q@NNZ"/>
       <pw:patient momex:id="${req.params.id}"/>
       <shippingaddress>
         <momex:address1>${req.params.streetaddress}-${req.params.apt}</momex:address1>

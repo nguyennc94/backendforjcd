@@ -15,8 +15,8 @@ router.get('/id/:id', async (req, res) => {
                  type="GetPatientOrders"
                  limit="5"
                  local="true">
-                 <momex:authenticate momex:username="xmlconnect_25"
-                                   momex:password="984@qSv@rps@R9F" />
+                 <momex:authenticate momex:username="xmlconnect_2"
+                                   momex:password="GAw@FrZ@e9Q@NNZ" />
                  <pw:patient momex:id="${req.params.id}"/>
     </transaction>
   `;

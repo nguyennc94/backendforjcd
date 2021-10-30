@@ -15,8 +15,8 @@ router.get('/id/:id/billingphone/:billingphone/area1/:area1/streetaddress1/:stre
             xmlns:pw="http://www.pharmacywire.com/"
             type="SetPatientInfo"
             local="true">
-        <momex:authenticate momex:username="xmlconnect_25"
-                            momex:password="984@qSv@rps@R9F" />
+        <momex:authenticate momex:username="xmlconnect_2"
+                            momex:password="GAw@FrZ@e9Q@NNZ" />
         <pw:patient momex:id="${req.params.id}">
             <momex:phone-day>${req.params.billingphone}</momex:phone-day>
       <momex:areacode-day>${req.params.area1}</momex:areacode-day>

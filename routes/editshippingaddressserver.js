@@ -15,8 +15,8 @@ router.get('/id/:id/shippingaddressid/:shippingaddressid/editshippingstreetaddre
             type="EditShippingAddress"
                   local="true">
 
-        <momex:authenticate momex:username="xmlconnect_25"
-                               momex:password="984@qSv@rps@R9F"/>
+        <momex:authenticate momex:username="xmlconnect_2"
+                               momex:password="GAw@FrZ@e9Q@NNZ"/>
            <pw:patient momex:id="${req.params.id}"/>
            <shippingaddress momex:id="${req.params.shippingaddressid}">
             <momex:address1>${req.params.editshippingstreetaddress}-${req.params.editshippingapt}</momex:address1>
