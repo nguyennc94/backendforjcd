@@ -9,15 +9,15 @@ router.get('/email/:email', async (req, res) => {
       "Origin, X-Requested-With, Content-Type, Accept"
     );
     let body = `<?xml version="1.0"?>
-    <transaction xmlns="http://www.metrex.net/momex/transaction#"
+    <tr:transaction xmlns:tr="http://www.metrex.net/momex/transaction#"
           xmlns:momex="http://www.metrex.net/momex#"
+                            xmlns:mt="http://www.metrex.net/momex/terms#"
           xmlns:pw="http://www.pharmacywire.com/"
-          type="ResetPassword"
-          local="true">
+                            xmlns:pwire5="http://www.pharmacywire.com/v5" tr:local="true" tr:type="ResetPassword" tr:flush-output="true">
       <momex:authenticate momex:username="xmlconnect_2"
-                              momex:password="GAw@FrZ@e9Q@NNZ" />
-      <pw:patient momex:username="${req.params.email}"></pw:patient>
-    </transaction>
+                              momex:password="GAw@FrZ@e9Q@NNZ"/>
+      <pwire5:customer pwire5:id="68400"/>
+    </tr:transaction>
   `;
 
       const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
