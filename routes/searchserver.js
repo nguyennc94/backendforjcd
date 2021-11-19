@@ -20,9 +20,9 @@ router.get('/search/:search', async (req, res) => {
 
                  local="true">
 
-        <momex:authenticate momex:username="xmlconnect_2"
+        <momex:authenticate momex:username="xmlconnect_25"
 
-                                momex:password="GAw@FrZ@e9Q@NNZ"/>
+                                momex:password="984@qSv@rps@R9F"/>
 
         <momex:criteria>
 

@@ -13,7 +13,7 @@ router.get('/users/:users/password/:password', async (req, res) => {
                  xmlns:momex="http://www.metrex.net/momex#"
                  type="AuthenticateUser"
                  local="true">
-        <momex:authenticate momex:username="xmlconnect_2" momex:password="GAw@FrZ@e9Q@NNZ"/>
+        <momex:authenticate momex:username="xmlconnect_25" momex:password="984@qSv@rps@R9F"/>
         <users>
           <user>
             <username>${req.params.users}</username>

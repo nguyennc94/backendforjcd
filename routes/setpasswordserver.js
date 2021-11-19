@@ -14,8 +14,8 @@ router.get('/id/:id/newpassword/:newpassword', async (req, res) => {
                 xmlns:pw="http://www.pharmacywire.com/"
                 type="SetPassword"
                 local="true">
-        <momex:authenticate momex:username="xmlconnect_2"
-                              momex:password="GAw@FrZ@e9Q@NNZ" />
+        <momex:authenticate momex:username="xmlconnect_25"
+                              momex:password="984@qSv@rps@R9F" />
         <pw:patient momex:id="${req.params.id}">
             <momex:password>${req.params.newpassword}</momex:password>
         </pw:patient>

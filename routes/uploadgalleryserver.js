@@ -17,8 +17,8 @@ router.post('/',upload.single("file"),async (req, res) => {
                      xmlns:pw="http://www.pharmacywire.com/"
             type="UploadDocument"
                      local="true">
-        <momex:authenticate momex:username="xmlconnect_2"
-                               momex:password="GAw@FrZ@e9Q@NNZ"/>
+        <momex:authenticate momex:username="xmlconnect_25"
+                               momex:password="984@qSv@rps@R9F"/>
         <momex:document momex:mime-type='${req.file.mimetype}' momex:file-name='${req.file.originalname}' pw:document-contains-rx="true" momex:mime-encoding="base64">${base64data}
       </momex:document>
     </transaction>
