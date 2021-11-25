@@ -14,7 +14,7 @@ router.get('/email/:email', async (req, res) => {
       xmlns:mt="http://www.metrex.net/momex/terms#"
       xmlns:pw="http://www.pharmacywire.com/"
       xmlns:pwire5="http://www.pharmacywire.com/v5" tr:local="true" tr:type="UserStatus" tr:flush-output="true">
-      <momex:authenticate momex:username="xmlconnect_25" momex:password="984@qSv@rps@R9F"/>
+      <momex:authenticate momex:username="xmlconnect_2" momex:password="GAw@FrZ@e9Q@NNZ"/>
       <tr:users>
         <tr:user momex:username="${req.params.email}"/>
       </tr:users>

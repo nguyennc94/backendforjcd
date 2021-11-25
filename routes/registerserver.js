@@ -15,8 +15,8 @@ router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/
         xmlns:pw="http://www.pharmacywire.com/"
         type="CreatePatient"
         local="true">
-      <momex:authenticate momex:username="xmlconnect_25"
-                  momex:password="984@qSv@rps@R9F" />
+      <momex:authenticate momex:username="xmlconnect_2"
+                  momex:password="GAw@FrZ@e9Q@NNZ" />
       <pw:patient momex:affiliate-id="" momex:agent-id="">
         <momex:username>${req.params.email}</momex:username>
         <momex:firstname>${req.params.fname}</momex:firstname>

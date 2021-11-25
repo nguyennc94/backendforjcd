@@ -14,8 +14,8 @@ router.get('/id/:id', async (req, res) => {
                             xmlns:mt="http://www.metrex.net/momex/terms#"
           xmlns:pw="http://www.pharmacywire.com/"
                             xmlns:pwire5="http://www.pharmacywire.com/v5" tr:local="true" tr:type="ResetPassword" tr:flush-output="true">
-      <momex:authenticate momex:username="xmlconnect_25"
-                              momex:password="984@qSv@rps@R9F"/>
+      <momex:authenticate momex:username="xmlconnect_2"
+                              momex:password="GAw@FrZ@e9Q@NNZ"/>
       <pwire5:customer pwire5:id="${req.params.id}"/>
     </tr:transaction>
   `;
