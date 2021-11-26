@@ -102,6 +102,8 @@ app.use('/getorder', require('./routes/getorderserver'));
 app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
 app.use('/uploadcamera', require('./routes/uploadcameraserver') )
 app.use('/userstatus', require('./routes/userstatusserver') )
+app.use('/resetpassword', require('./routes/resetpasswordserver') )
+
 
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
