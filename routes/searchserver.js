@@ -20,9 +20,9 @@ router.get('/search/:search', async (req, res) => {
 
                  local="true">
 
-        <momex:authenticate momex:username="xmlconnect_25"
+        <momex:authenticate momex:username="xmlconnect_9"
 
-                                momex:password="984@qSv@rps@R9F"/>
+                                momex:password="EZZ!C7F!68Y!9w3"/>
 
         <momex:criteria>
 
@@ -38,7 +38,7 @@ router.get('/search/:search', async (req, res) => {
     </transaction>
   `;
 
-      const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+      const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);

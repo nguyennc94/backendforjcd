@@ -15,13 +15,13 @@ router.get('/id/:id', async (req, res) => {
                  type="GetPatientOrders"
                  limit="5"
                  local="true">
-                 <momex:authenticate momex:username="xmlconnect_25"
-                                   momex:password="984@qSv@rps@R9F" />
+                 <momex:authenticate momex:username="xmlconnect_9"
+                                   momex:password="EZZ!C7F!68Y!9w3" />
                  <pw:patient momex:id="${req.params.id}"/>
     </transaction>
   `;
 
-      const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+      const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);

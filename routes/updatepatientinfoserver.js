@@ -15,8 +15,8 @@ router.get('/id/:id/billingphone/:billingphone/area1/:area1/streetaddress1/:stre
             xmlns:pw="http://www.pharmacywire.com/"
             type="SetPatientInfo"
             local="true">
-        <momex:authenticate momex:username="xmlconnect_25"
-                            momex:password="984@qSv@rps@R9F" />
+        <momex:authenticate momex:username="xmlconnect_9"
+                            momex:password="EZZ!C7F!68Y!9w3" />
         <pw:patient momex:id="${req.params.id}">
             <momex:phone-day>${req.params.billingphone}</momex:phone-day>
       <momex:areacode-day>${req.params.area1}</momex:areacode-day>
@@ -34,7 +34,7 @@ router.get('/id/:id/billingphone/:billingphone/area1/:area1/streetaddress1/:stre
     </transaction>
   `;
 
-      const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+      const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);

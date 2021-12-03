@@ -29,16 +29,16 @@ app.get('/', async (req, res) => {
 
                  local="true">
 
-                 <momex:authenticate momex:username="xmlconnect_2"
+                 <momex:authenticate momex:username="xmlconnect_9"
 
-                 momex:password="GAw@FrZ@e9Q@NNZ"/>
+                 momex:password="EZZ!C7F!68Y!9w3"/>
 
 
 
     </transaction>
   `;
 
-        const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+        const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
         const a = response.data
       const jsonResponse = JSON.stringify(a);
       res.send(jsonResponse);

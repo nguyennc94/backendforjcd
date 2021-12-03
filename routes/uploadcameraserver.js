@@ -20,14 +20,14 @@ router.post('/',upload.single("file"),async (req, res) => {
                      xmlns:pw="http://www.pharmacywire.com/"
             type="UploadDocument"
                      local="true">
-        <momex:authenticate momex:username="xmlconnect_25"
-                               momex:password="984@qSv@rps@R9F"/>
+        <momex:authenticate momex:username="xmlconnect_9"
+                               momex:password="EZZ!C7F!68Y!9w3"/>
         <momex:document momex:mime-type='${req.file.mimetype}' momex:file-name='prescriptiondocument.png' pw:document-contains-rx="true" momex:mime-encoding="base64">${base64data}
                                </momex:document>
     </transaction>
   `;
 
-      const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+      const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);

@@ -15,8 +15,8 @@ router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/
         xmlns:pw="http://www.pharmacywire.com/"
         type="CreatePatient"
         local="true">
-      <momex:authenticate momex:username="xmlconnect_25"
-                  momex:password="984@qSv@rps@R9F" />
+      <momex:authenticate momex:username="xmlconnect_9"
+                  momex:password="EZZ!C7F!68Y!9w3" />
       <pw:patient momex:affiliate-id="" momex:agent-id="">
         <momex:username>${req.params.email}</momex:username>
         <momex:firstname>${req.params.fname}</momex:firstname>
@@ -53,7 +53,7 @@ router.get('/email/:email/fname/:fname/lname/:lname/year/:year/month/:month/day/
     </transaction>
   `;
 
-      const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+      const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);

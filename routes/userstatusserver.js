@@ -14,14 +14,14 @@ router.get('/email/:email', async (req, res) => {
       xmlns:mt="http://www.metrex.net/momex/terms#"
       xmlns:pw="http://www.pharmacywire.com/"
       xmlns:pwire5="http://www.pharmacywire.com/v5" tr:local="true" tr:type="UserStatus" tr:flush-output="true">
-      <momex:authenticate momex:username="xmlconnect_2" momex:password="GAw@FrZ@e9Q@NNZ"/>
+      <momex:authenticate momex:username="xmlconnect_9" momex:password="EZZ!C7F!68Y!9w3"/>
       <tr:users>
         <tr:user momex:username="${req.params.email}"/>
       </tr:users>
     </tr:transaction>
   `;
 
-      const response = await axios.post("https://jpp.test.pharmacywire.com/momex/NavCode/xmlconnect",body);
+      const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
       const jsonResponse = JSON.stringify(a);
