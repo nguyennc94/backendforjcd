@@ -74,7 +74,7 @@ app.get('/', async (req, res) => {
       main().catch(console.error);
 
       async function createListing( client, newListing){
-        const result = await client.db("PW").collection("PWtest")
+        const result = await client.db("PW").collection("Catalog")
         .insertOne(newListing)
 
         console.log(`New listing create with id: ${result.insertedId}`)
@@ -103,6 +103,7 @@ app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
 app.use('/uploadcamera', require('./routes/uploadcameraserver') )
 app.use('/userstatus', require('./routes/userstatusserver') )
 app.use('/resetpassword', require('./routes/resetpasswordserver') )
+app.use('/catalog1', require('./routes/catalogserver1'));
 
 
 app.listen(PORT, () => {

@@ -4,10 +4,7 @@ const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 
 router.get('/', async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
@@ -41,7 +38,7 @@ router.get('/', async (req, res) => {
   main().catch(console.error);
 
   async function findOneListingByName(client, nameofListing){
-    const result = await client.db("PW").collection("PWtest")
+    const result = await client.db("PW").collection("Catalog")
     .findOne({name:nameofListing})
     if(result) {
       console.log(`Found a listing in the collection with the name ${nameofListing}`)
