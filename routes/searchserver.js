@@ -30,7 +30,7 @@ router.get('/search/:search', async (req, res) => {
 
                    pw:include-inactive="false"/>
 
-            <pw:drug-pics-search></pw:drug-pics-search>
+            <pw:drug-pics-search>${req.params.search}</pw:drug-pics-search>
 
 
         </momex:criteria>
