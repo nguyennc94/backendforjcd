@@ -51,6 +51,7 @@ app.get('/', async (req, res) => {
          */
         const uri = "mongodb+srv://canadadrugstore:Health4Ever!@cluster0.1zdtx.mongodb.net/Catalog?retryWrites=true&w=majority";
 
+
         const client = new MongoClient(uri);
 
         try {
@@ -59,7 +60,7 @@ app.get('/', async (req, res) => {
 
             // Make the appropriate DB calls
             await createListing(client,{
-              name: "AllProducts",
+              name: "PWdata",
               data: a
             })
 
@@ -102,7 +103,6 @@ app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
 app.use('/uploadcamera', require('./routes/uploadcameraserver') )
 app.use('/userstatus', require('./routes/userstatusserver') )
 app.use('/resetpassword', require('./routes/resetpasswordserver') )
-app.use('/catalog1', require('./routes/catalogserver1'));
 
 
 app.listen(PORT, () => {
