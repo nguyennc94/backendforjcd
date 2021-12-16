@@ -2,7 +2,7 @@ var router = require('express').Router();
 const axios = require("axios");
 
 
-router.get('/product/:product', async (req, res) => {
+router.get('/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
       "Access-Control-Allow-Headers",
@@ -20,20 +20,11 @@ router.get('/product/:product', async (req, res) => {
 
                  local="true">
 
-        <momex:authenticate momex:username="xmlconnect_9"
+                 <momex:authenticate momex:username="xmlconnect_9"
 
-                                momex:password="EZZ!C7F!68Y!9w3"/>
-
-        <momex:criteria>
-
-            <pw:drug-package-option pw:include-zero-priced="true"
-
-                   pw:include-inactive="false"/>
-
-            <pw:drug-pics-search>${req.params.product}</pw:drug-pics-search>
+                 momex:password="EZZ!C7F!68Y!9w3"/>
 
 
-        </momex:criteria>
 
     </transaction>
   `;
