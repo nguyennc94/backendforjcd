@@ -49,8 +49,7 @@ app.get('/', async (req, res) => {
          * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
          * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
          */
-        const uri = "mongodb+srv://canadadrugstore:02061994@cluster0.issgz.mongodb.net/PW?retryWrites=true&w=majority";
-
+        const uri = "mongodb+srv://canadadrugstore:Health4Ever!@cluster0.1zdtx.mongodb.net/Catalog?retryWrites=true&w=majority";
 
         const client = new MongoClient(uri);
 
@@ -60,7 +59,7 @@ app.get('/', async (req, res) => {
 
             // Make the appropriate DB calls
             await createListing(client,{
-              name: "PWdata",
+              name: "AllProducts",
               data: a
             })
 
@@ -74,7 +73,7 @@ app.get('/', async (req, res) => {
       main().catch(console.error);
 
       async function createListing( client, newListing){
-        const result = await client.db("PW").collection("Catalog")
+        const result = await client.db("Catalog").collection("AllProducts")
         .insertOne(newListing)
 
         console.log(`New listing create with id: ${result.insertedId}`)
