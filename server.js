@@ -103,6 +103,7 @@ app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
 app.use('/uploadcamera', require('./routes/uploadcameraserver') )
 app.use('/userstatus', require('./routes/userstatusserver') )
 app.use('/resetpassword', require('./routes/resetpasswordserver') )
+app.use('/catalog1', require('./routes/catalogserver1'));
 
 
 app.listen(PORT, () => {
