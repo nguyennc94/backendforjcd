@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 
 //api endpoints
 app.use('/login', require('./routes/loginserver'));
-// app.use('/catalog', require('./routes/catalogserver'));
+app.use('/catalog', require('./routes/catalogserver'));
 app.use('/header', require('./routes/headerserver'));
 app.use('/register', require('./routes/registerserver'));
 app.use('/addshippingaddress', require('./routes/addshippingaddressserver'));
