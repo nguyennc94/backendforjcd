@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 
 //api endpoints
 app.use('/login', require('./routes/loginserver'));
-// app.use('/catalog', require('./routes/catalogserver'));
+app.use('/catalog', require('./routes/catalogserver'));
 app.use('/header', require('./routes/headerserver'));
 app.use('/register', require('./routes/registerserver'));
 app.use('/addshippingaddress', require('./routes/addshippingaddressserver'));
@@ -42,7 +42,7 @@ app.use('/uploadgallery', require('./routes/uploadgalleryserver'));
 app.use('/uploadcamera', require('./routes/uploadcameraserver') )
 app.use('/userstatus', require('./routes/userstatusserver') )
 app.use('/resetpassword', require('./routes/resetpasswordserver') )
-// app.use('/catalog1', require('./routes/catalogserver1'));
+app.use('/catalog1', require('./routes/catalogserver1'));
 // app.use('/callcatalog', require('./routes/callcatalogserver'));
 
 
