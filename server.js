@@ -17,6 +17,7 @@ app.get('/', async (req, res) => {
       "Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept"
     );
+    res.send("Welcome")
 
   });
 
@@ -85,4 +86,3 @@ app.listen(PORT, () => {
 });
 
 
-console.log("Welcome")
