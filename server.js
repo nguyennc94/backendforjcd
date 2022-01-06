@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
 
 
 
-  app.get('/users/:users/password/:password', async (req, res) => {
+app.get('/users/:users/password/:password', async (req, res) => {
       res.setHeader("Access-Control-Allow-Origin", "*");
       res.header(
         "Access-Control-Allow-Headers",
@@ -83,3 +83,6 @@ app.get('/', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
 });
+
+
+console.log("Welcome")
