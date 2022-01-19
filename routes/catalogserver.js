@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     "Origin, X-Requested-With, Content-Type, Accept"
   );
 
-
   async function main(){
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
