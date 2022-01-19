@@ -29,6 +29,7 @@ router.get('/', async (req, res) => {
     </transaction>
   `;
 
+
       const response = await axios.post("https://jpp.pharmacywire.com/momex/NavCode/xmlconnect",body);
       const a = response.data
       console.log(response)
