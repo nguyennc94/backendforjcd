@@ -48,6 +48,7 @@ app.use('/userstatus', require('./routes/userstatusserver') )
 app.use('/resetpassword', require('./routes/resetpasswordserver') )
 app.use('/catalog1', require('./routes/catalogserver1'));
 app.use('/callcatalog', require('./routes/callcatalogserver'));
+app.use('/getpatientrefill', require('./routes/getpatientrefillserver'));
 
 
 app.listen(PORT, () => {
