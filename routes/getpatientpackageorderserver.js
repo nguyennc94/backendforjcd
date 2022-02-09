@@ -12,11 +12,12 @@ router.get('/id/:id', async (req, res) => {
     <transaction xmlns="http://www.metrex.net/momex/transaction#"
     xmlns:momex="http://www.metrex.net/momex#"
     xmlns:pw="http://www.pharmacywire.com/"
-    type="GetPatientRefills"
-    local="true">
-                 <momex:authenticate momex:username="xmlconnect_9"
-                                   momex:password="EZZ!C7F!68Y!9w3" />
-                 <pw:patient momex:id="${req.params.id}"/>
+    type="Catalog" local="true">
+    <momex:authenticate momex:username="your-client-id" momex:password="your-key"/>
+    <momex:criteria>
+    <pw:drug-package-option pw:include-zero-priced="false" pw:include-inactive="false"/>
+    <pw:package pw:id="${req.params.id}"/> <
+    /momex:criteria>
     </transaction>
   `;
 
