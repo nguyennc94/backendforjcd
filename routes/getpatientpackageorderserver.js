@@ -13,7 +13,8 @@ router.get('/id/:id', async (req, res) => {
     xmlns:momex="http://www.metrex.net/momex#"
     xmlns:pw="http://www.pharmacywire.com/"
     type="Catalog" local="true">
-    <momex:authenticate momex:username="your-client-id" momex:password="your-key"/>
+    <momex:authenticate momex:username="xmlconnect_9"
+    momex:password="EZZ!C7F!68Y!9w3" />
     <momex:criteria>
     <pw:drug-package-option pw:include-zero-priced="false" pw:include-inactive="false"/>
     <pw:package pw:id="${req.params.id}"/> <
