@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
      */
-    const uri = "mongodb+srv://canadadrugstore:Health4Ever!@cluster0.cdqwb.mongodb.net/JCDOfficialServerDatabase?retryWrites=true&w=majority";
+    const uri = "mongodb+srv://Canadadrugstore:Health4Ever!@cluster0.hvsud.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
     const client = new MongoClient(uri);
@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
   main().catch(console.error);
 
   async function findOneListingByName(client, nameofListing){
-    const result = await client.db("JCDOfficialServerDatabase").collection("CatalogOfficialDatabase")
+    const result = await client.db("JCDdatabase").collection("JCDdatabase")
     .findOne({name:nameofListing})
     if(result) {
       console.log(`Found a listing in the collection with the name ${nameofListing}`)
