@@ -49,6 +49,8 @@ app.use('/resetpassword', require('./routes/resetpasswordserver') )
 app.use('/catalog1', require('./routes/catalogserver1'));
 app.use('/callcatalog', require('./routes/callcatalogserver'));
 app.use('/getpatientpackage', require('./routes/getpatientpackageorderserver'));
+app.use('/sendresetemail', require('./routes/sendresetpassword'));
+app.use('/welcomeregister', require('./routes/welcomeregister'));
 
 
 app.listen(PORT, () => {
