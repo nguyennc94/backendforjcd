@@ -37,6 +37,7 @@ router.get('/email/:email/fname/:fname/lname/:lname', async (req, res) => {
   request
     .then((result) => {
       console.log(result.body)
+      res.send(result.body);
     })
     .catch((err) => {
       console.log(err.statusCode)
